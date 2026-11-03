@@ -1,5 +1,10 @@
 // Shared functions render cards, details, and tables from catalogItems.
-function currency(value) { return "R" + value.toLocaleString("en-ZA", { minimumFractionDigits: 2, maximumFractionDigits: 2 }); }
+function currency(value) {
+  var formatted = Number(value).toFixed(2);
+  var parts = formatted.split(".");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  return "R" + parts[0] + "." + parts[1];
+}
 function imagePath(slug) { var paths = { vr: "assets/vr.jpg", racing: "assets/racing.jpg", escape: "assets/escape.jpg" }; return paths[slug] || ""; }
 function setImage(element, path, label) {
   if (!element) return;
