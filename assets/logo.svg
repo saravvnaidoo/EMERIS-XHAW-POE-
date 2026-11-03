@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 120" role="img" aria-labelledby="title">
+  <title id="title">Next Level Gaming</title>
+  <rect width="620" height="120" rx="18" fill="#F2A93B"/>
+  <path d="M72 38c-21 0-38 17-38 38 0 15 9 28 22 34l18-22h54l18 22c13-6 22-19 22-34 0-21-17-38-38-38H72z" fill="#1F2A44"/>
+  <circle cx="79" cy="65" r="8" fill="#F2A93B"/><circle cx="57" cy="65" r="7" fill="#F2A93B"/><circle cx="68" cy="54" r="7" fill="#F2A93B"/><circle cx="68" cy="76" r="7" fill="#F2A93B"/>
+  <circle cx="133" cy="58" r="8" fill="#2E86DE"/><circle cx="151" cy="72" r="8" fill="#3AAF57"/>
+  <text x="188" y="54" fill="#1F2A44" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="34" font-weight="700" letter-spacing="2">NEXT LEVEL</text>
+  <text x="188" y="91" fill="#FFFFFF" stroke="#1F2A44" stroke-width="1" paint-order="stroke" font-family="Trebuchet MS, Segoe UI, sans-serif" font-size="31" font-weight="700" letter-spacing="5">GAMING</text>
+</svg>
