@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
   if (header) {
     header.innerHTML = '<div class="nav-wrap"><a class="logo" href="index.html" aria-label="Next Level Gaming home"><img class="site-logo" alt="Next Level Gaming logo"></a><nav class="main-nav" aria-label="Main navigation"><a href="index.html" data-page="index.html">Home</a><a href="about.html" data-page="about.html">About</a><a href="packages.html" data-page="packages.html">Packages</a><a href="experiences.html" data-page="experiences.html">Experiences</a><a href="fees.html" data-page="fees.html">Fees</a><a href="contact.html" data-page="contact.html">Contact</a></nav></div>';
     var logoImage = header.querySelector(".site-logo");
-    var logoFiles = ["assets/logo.svg", "assets/logo.jpg", "assets/logo.jpeg", "assets/logo.png", "assets/logo.webp"];
+    var logoFiles = ["assets/images/logo.jpg"];
     var logoIndex = 0;
     function tryLogo() {
       if (logoIndex >= logoFiles.length) { logoImage.style.display = "none"; return; }

@@ -15,7 +15,7 @@ body {
 }
 .site-header { background: var(--navy); }
 .nav-wrap { width: 90%; max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; min-height: 76px; }
-.site-logo { width: 260px; height: 70px; object-fit: contain; object-position: left center; }
+.site-logo { width: 300px; height: 76px; object-fit: contain; object-position: left center; }
 .logo { display: inline-flex; align-items: center; height: 76px; }
 .logo { overflow: visible; }
 .logo { color: var(--orange); font-weight: bold; text-decoration: none; font-size: 22px; }
