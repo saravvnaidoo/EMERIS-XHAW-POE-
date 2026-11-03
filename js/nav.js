@@ -4,17 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var header = document.getElementById("site-header");
   var footer = document.getElementById("site-footer");
   if (header) {
-    header.innerHTML = '<div class="nav-wrap"><a class="logo" href="index.html" aria-label="Next Level Gaming home"><img class="site-logo" alt="Next Level Gaming logo"></a><nav class="main-nav" aria-label="Main navigation"><a href="index.html" data-page="index.html">Home</a><a href="about.html" data-page="about.html">About</a><a href="packages.html" data-page="packages.html">Packages</a><a href="experiences.html" data-page="experiences.html">Experiences</a><a href="fees.html" data-page="fees.html">Fees</a><a href="contact.html" data-page="contact.html">Contact</a></nav></div>';
-    var logoImage = header.querySelector(".site-logo");
-    var logoFiles = ["assets/images/logo.jpg"];
-    var logoIndex = 0;
-    function tryLogo() {
-      if (logoIndex >= logoFiles.length) { logoImage.style.display = "none"; return; }
-      logoImage.onload = function () { logoImage.style.display = "block"; };
-      logoImage.onerror = function () { logoIndex += 1; tryLogo(); };
-      logoImage.src = logoFiles[logoIndex];
-    }
-    tryLogo();
+    header.innerHTML = '<div class="nav-wrap"><a class="logo" href="index.html" aria-label="Next Level Gaming home"><img class="site-logo" src="assets/images/logo.jpg" alt="Next Level Gaming logo"></a><nav class="main-nav" aria-label="Main navigation"><a href="index.html" data-page="index.html">Home</a><a href="about.html" data-page="about.html">About</a><a href="packages.html" data-page="packages.html">Packages</a><a href="experiences.html" data-page="experiences.html">Experiences</a><a href="fees.html" data-page="fees.html">Fees</a><a href="contact.html" data-page="contact.html">Contact</a></nav></div>';
   }
   if (footer) footer.innerHTML = '<p>&copy; 2026 Next Level Gaming &amp; Esports Arena</p>';
   document.querySelectorAll(".main-nav a").forEach(function (link) {
