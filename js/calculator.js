@@ -13,6 +13,7 @@ function calculateQuote() {
   document.getElementById("vatLine").textContent = "VAT: " + currency(vat);
   document.getElementById("totalLine").textContent = "Total: " + currency(total);
   sessionStorage.setItem("quoteBreakdown", JSON.stringify({ items: selected.map(function (item) { return item.slug; }), subtotal: subtotal, discount: discount, vat: vat, total: total }));
+  return selected.length;
 }
 function setupCalculator() {
   var chosen = JSON.parse(sessionStorage.getItem("quoteItems") || "[]");
@@ -22,7 +23,11 @@ function setupCalculator() {
     label.className = "check-row";
     label.innerHTML = '<input class="fee-checkbox" type="checkbox" value="' + item.slug + '"' + (chosen.includes(item.slug) ? " checked" : "") + '> ' + item.name + ' - ' + currency(item.price);
     container.appendChild(label);
-    label.querySelector("input").addEventListener("change", calculateQuote);
+    label.querySelector("input").addEventListener("change", function () { calculateQuote(); });
+  });
+  document.getElementById("calculateButton").addEventListener("click", function () {
+    var count = calculateQuote();
+    document.getElementById("feeMessage").textContent = count ? "Quote calculated successfully." : "Please select at least one item.";
   });
   calculateQuote();
 }
