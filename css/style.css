@@ -229,8 +229,8 @@ footer { background: var(--navy); color: white; text-align: center; padding: 18p
 .why-we-exist { width: 100%; margin-top: 3rem; padding: 3rem 20px; text-align: center; background: #263351; }
 .why-we-exist h2 { color: var(--orange); }
 .why-we-exist p { max-width: 680px; margin: 0 auto; color: white; font-size: 1.15rem; line-height: 1.7; }
-.packages-page .banner { background: none; }
-.packages-page .banner img { object-fit: cover; object-position: center; background: transparent; }
+.packages-page .banner { height: auto; max-height: none; aspect-ratio: 2752 / 1536; background: transparent; }
+.packages-page .banner img { width: 100%; height: 100%; object-fit: contain; object-position: center; background: transparent; }
 .packages-page main > h1 { margin-bottom: 26px; }
 .packages-page .toolbar { margin-top: 24px; }
 @media (max-width: 900px) { .founder-feature { grid-template-columns: 1fr; text-align: center; } .founder-image-slot { margin: 0 auto; } .about-stat-grid { grid-template-columns: 1fr; } }
