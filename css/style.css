@@ -15,7 +15,7 @@ body {
 }
 .site-header { background: var(--navy); }
 .nav-wrap { width: 90%; max-width: 1440px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; min-height: 76px; }
-.site-logo { width: 300px; height: 76px; object-fit: contain; object-position: left center; }
+.site-logo { width: 330px; height: 76px; object-fit: contain; object-position: left center; }
 .logo { display: inline-flex; align-items: center; height: 76px; }
 .logo { overflow: visible; }
 .logo { color: var(--orange); font-weight: bold; text-decoration: none; font-size: 22px; }
@@ -169,3 +169,19 @@ footer { background: var(--navy); color: white; text-align: center; padding: 18p
 .info-block h2 { font-size: 24px; }
 .info-block p { color: #4b5872; line-height: 1.65; }
 @media (max-width: 700px) { .about-layout { grid-template-columns: 1fr; } }
+
+/* Refined About Us layout */
+.about-page { padding-top: 38px; }
+.about-heading { max-width: none; display: grid; grid-template-columns: 0.75fr 1.25fr; gap: 40px; align-items: end; padding-bottom: 28px; margin-bottom: 30px; border-bottom: 1px solid #dfe5ef; }
+.about-heading h1 { margin-bottom: 0; }
+.about-intro { margin: 0; padding-left: 24px; border-left: 5px solid var(--orange); }
+.about-layout { grid-template-columns: 300px 1fr; gap: 30px; }
+.founder-column { min-height: 430px; padding: 24px; border: 1px solid #e1e6ef; border-top: 6px solid var(--orange); border-radius: 14px; background: white; box-shadow: 0 12px 30px rgba(31,42,68,.09); }
+.founder-label { display: inline-block; color: var(--orange); font-size: 13px; font-weight: bold; letter-spacing: 2px; text-transform: uppercase; }
+.founder-slot { width: 230px; height: 230px; border-radius: 50%; margin: 12px auto 18px; box-shadow: 0 10px 25px rgba(31,42,68,.16); }
+.info-grid { gap: 18px; }
+.info-block { min-height: 205px; padding: 28px 26px 24px 82px; border: 1px solid #e1e6ef; border-radius: 14px; background: white; box-shadow: 0 10px 26px rgba(31,42,68,.07); }
+.card-number { position: absolute; left: 26px; top: 28px; width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; background: var(--navy); color: var(--orange); font-size: 13px; font-weight: bold; }
+.info-block h2 { font-size: 23px; }
+@media (max-width: 900px) { .about-heading { grid-template-columns: 1fr; gap: 15px; } .about-layout { grid-template-columns: 1fr; } }
+@media (max-width: 700px) { .info-block { padding-left: 26px; padding-top: 76px; } .card-number { top: 24px; } }
