@@ -6,12 +6,23 @@ function currency(value) {
   return "R" + parts[0] + "." + parts[1];
 }
 function imagePath(slug) { var paths = { vr: "assets/vr.jpg", racing: "assets/racing.jpg", escape: "assets/escape.jpg" }; return paths[slug] || ""; }
-function setImage(element, path, label) {
+function setImage(element, paths, label) {
   if (!element) return;
+  var candidates = Array.isArray(paths) ? paths : [paths];
+  var index = 0;
   var image = new Image();
-  image.onload = function () { element.innerHTML = '<img src="' + path + '" alt="' + label + '">'; };
-  image.onerror = function () { element.innerHTML = '<span>' + label + '</span>'; element.className += " image-placeholder"; };
-  image.src = path;
+
+  function tryNextImage() {
+    if (index >= candidates.length) {
+      element.innerHTML = '<span>' + label + '</span>';
+      element.className += " image-placeholder";
+      return;
+    }
+    image.onload = function () { element.innerHTML = '<img src="' + candidates[index] + '" alt="' + label + '">'; };
+    image.onerror = function () { index += 1; tryNextImage(); };
+    image.src = candidates[index];
+  }
+  tryNextImage();
 }
 function renderCards(items, containerId, detailPage) {
   var container = document.getElementById(containerId);
