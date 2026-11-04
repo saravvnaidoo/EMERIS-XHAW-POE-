@@ -41,7 +41,6 @@ The site can also be opened directly by opening `index.html` in a web browser.
 - Package cards rendered with JavaScript
 - Package price sorting
 - Package and experience detail pages
-- Live fee calculation with a 5 percent discount for two or more selections
 - 15 percent VAT calculation
 - Quote information saved with session storage
 - Booking and contact form validation
