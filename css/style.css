@@ -267,4 +267,8 @@ footer { background: var(--navy); color: white; text-align: center; padding: 18p
   .compare-page main > table td::before { content: attr(data-label); display: block; margin-bottom: 4px; color: var(--blue); font-size: 12px; font-weight: bold; text-transform: uppercase; }
 }
 
+  main > .button { margin-bottom: 24px; }
+  .redirect-message { font-weight: bold; }
+  .redirect-message strong { color: var(--orange); }
+
 .fee-message { min-height: 22px; margin-top: 14px; color: var(--green); font-weight: bold; }

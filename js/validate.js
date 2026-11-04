@@ -31,6 +31,7 @@ function setupValidation(formId, includesMessage) {
         progress.querySelector("[role='progressbar']").setAttribute("aria-valuenow", percentage);
         if (percentage === 100) {
           clearInterval(timer);
+          progress.hidden = true;
           window.location.href = "confirmation.html";
         }
       }, 30);
