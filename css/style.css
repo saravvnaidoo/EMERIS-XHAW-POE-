@@ -268,7 +268,5 @@ footer { background: var(--navy); color: white; text-align: center; padding: 18p
 }
 
   main > .button { margin-bottom: 24px; }
-  .redirect-message { font-weight: bold; }
-  .redirect-message strong { color: var(--orange); }
 
 .fee-message { min-height: 22px; margin-top: 14px; color: var(--green); font-weight: bold; }
