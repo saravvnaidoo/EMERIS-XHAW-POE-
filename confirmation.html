@@ -4,14 +4,17 @@
 var purchasedNames = quote && quote.items ? quote.items.map(function (slug) { var item = catalogItems.find(function (entry) { return entry.slug === slug; }); return item ? item.name : ""; }).filter(Boolean) : [];
 if (purchasedNames.length) document.getElementById("purchaseMessage").textContent = "Thank you for purchasing " + purchasedNames.join(", ") + ".";
 var countdown = 5;
-document.getElementById("redirectCountdown").textContent = countdown;
-var countdownTimer = setInterval(function () {
+var countdownElement = document.getElementById("redirectCountdown");
+countdownElement.textContent = countdown;
+function updateCountdown() {
   countdown -= 1;
-  document.getElementById("redirectCountdown").textContent = countdown;
+  countdownElement.textContent = countdown;
   if (countdown === 0) {
-    clearInterval(countdownTimer);
-    setTimeout(goHome, 500);
+    goHome();
+    return;
   }
-}, 1000);
-function goHome() { sessionStorage.removeItem("quoteBreakdown"); sessionStorage.removeItem("quoteItems"); sessionStorage.removeItem("customerDetails"); window.location.replace("index.html"); }
+  window.setTimeout(updateCountdown, 1000);
+}
+window.setTimeout(updateCountdown, 1000);
+function goHome() { sessionStorage.removeItem("quoteBreakdown"); sessionStorage.removeItem("quoteItems"); sessionStorage.removeItem("customerDetails"); window.location.href = "index.html"; }
 document.getElementById("backHome").onclick = goHome;</script></body></html>
