@@ -19,24 +19,7 @@ function setupValidation(formId, includesMessage) {
       var selectedCount = form.querySelectorAll(".fee-checkbox:checked").length;
       if (!selectedCount) { document.getElementById("feeMessage").textContent = "Please select at least one item."; return; }
       sessionStorage.setItem("customerDetails", JSON.stringify({ name: document.getElementById("fullName").value, phone: phone.value, email: document.getElementById("emailAddress").value }));
-      var submitButton = form.querySelector("button[type='submit']");
-      var progress = document.getElementById("requestProgress");
-      var progressFill = document.getElementById("requestProgressFill");
-      var progressValue = document.getElementById("requestProgressValue");
-      submitButton.disabled = true;
-      progress.hidden = false;
-      var started = Date.now();
-      var timer = setInterval(function () {
-        var percentage = Math.min(100, Math.floor((Date.now() - started) / 3000 * 100));
-        progressFill.style.width = percentage + "%";
-        progressValue.textContent = percentage + "%";
-        progress.querySelector("[role='progressbar']").setAttribute("aria-valuenow", percentage);
-        if (percentage === 100) {
-          clearInterval(timer);
-          progress.hidden = true;
-          window.location.href = "confirmation.html";
-        }
-      }, 30);
+      window.location.href = "confirmation.html";
     }
     else { document.getElementById("contactSuccess").textContent = "Thank you. Your enquiry has been sent."; form.reset(); }
   });
