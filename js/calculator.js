@@ -23,7 +23,7 @@ function setupCalculator() {
   catalogItems.forEach(function (item) {
     var label = document.createElement("label");
     label.className = "check-row";
-    label.innerHTML = '<input class="fee-checkbox" type="checkbox" value="' + item.slug + '"' + (chosen.includes(item.slug) ? " checked" : "") + '> ' + item.name + ' — ' + currency(item.price);
+    label.innerHTML = '<input class="fee-checkbox" type="checkbox" value="' + item.slug + '"' + (chosen.includes(item.slug) ? " checked" : "") + '> ' + item.name + ' - ' + currency(item.price);
     container.appendChild(label);
     label.querySelector("input").addEventListener("change", function () { calculateQuote(); });
   });
