@@ -25,11 +25,15 @@ function setupCalculator() {
     label.className = "check-row";
     label.innerHTML = '<input class="fee-checkbox" type="checkbox" value="' + item.slug + '"' + (chosen.includes(item.slug) ? " checked" : "") + '> ' + item.name + ' - ' + currency(item.price);
     container.appendChild(label);
-    label.querySelector("input").addEventListener("change", function () { calculateQuote(); });
   });
   document.getElementById("calculateButton").addEventListener("click", function () {
     var count = calculateQuote();
     document.getElementById("feeMessage").textContent = count ? "Quote calculated successfully." : "Please select at least one item.";
   });
-  calculateQuote();
+  document.getElementById("feeRows").innerHTML = "";
+  document.getElementById("subtotalLine").textContent = "";
+  document.getElementById("discountLine").textContent = "";
+  document.getElementById("vatLine").textContent = "";
+  document.getElementById("totalLine").textContent = "";
+  document.getElementById("feeMessage").textContent = "";
 }
