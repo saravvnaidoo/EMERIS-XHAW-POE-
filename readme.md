@@ -11,6 +11,11 @@ A responsive website for Next Level Gaming & Esports Arena in Johannesburg. The 
 
 No framework, build tool, package manager, database, or backend is used.
 
+## Demo Video
+
+Watch the video demonstration of the project on YouTube:  
+👉 [https://youtu.be/S64E0IlIEpk](https://youtu.be/S64E0IlIEpk)
+
 ## How to Run the Website
 
 You can access and open the live website directly at:  
@@ -84,10 +89,16 @@ The calculated total on the Fees page is an estimate for quoting purposes, not a
 ## Project Structure
 
 ```text
-EMERIS-XHAW-POE-/
+xhaw5112-wil-g1-2026-wil-g1-website-saravvnaidoo/
 ├── assets/
+│   └── images/
+├── docs/
+│   └── Bombers_United_Next_Level_Gaming_Presentation.pptx
 ├── css/
 ├── js/
+│   ├── data.js
+│   ├── nav.js
+│   └── render.js
 ├── index.html
 ├── about.html
 ├── packages.html
@@ -97,4 +108,10 @@ EMERIS-XHAW-POE-/
 ├── confirmation.html
 ├── compare.html
 ├── all-packages.html
-└── [individual package & experience detail pages]
+├── ultimate-gamer-pass.html
+├── vip-gaming-experience.html
+├── esports-training.html
+├── birthday-party.html
+├── virtual-reality.html
+├── racing-simulator.html
+└── escape-room.html
