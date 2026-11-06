@@ -49,7 +49,7 @@ The site can also be opened directly by opening `index.html` in a web browser.
 
 ## Image Assets
 
-Images are stored in the `assets/` and `assets/images/` folders. Page images include the logo, hero banners, founder image, package images, experience images, event image, arena image, and confirmation banner.
+Images are stored in the `assets/images/` folder. Page images include the logo, hero banners, founder image, package images, experience images, event image, arena image, and confirmation banner.
 
 ## Pricing
 
@@ -66,7 +66,7 @@ All four gaming packages use a fee of R1500.00. All three individual experiences
 
 ```text
 XHAW TASK 3/
-├── assets/
+├── assets/images/
 ├── css/
 ├── js/
 ├── index.html
