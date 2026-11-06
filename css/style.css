@@ -20,6 +20,7 @@ body {
 .logo { overflow: visible; }
 .logo { color: var(--orange); font-weight: bold; text-decoration: none; font-size: 22px; }
 .main-nav { display: flex; gap: 8px; }
+.nav-toggle { display: none; }
 .main-nav a { color: white; text-decoration: none; padding: 12px 10px; border-radius: 6px; }
 .main-nav a:hover, .main-nav a.active { background: var(--orange); color: var(--navy); }
 main { width: 90%; max-width: 1440px; min-height: 824px; margin: 0 auto; padding: 45px 0 70px; }
@@ -251,6 +252,12 @@ footer { background: var(--navy); color: white; text-align: center; padding: 18p
 .detail-layout aside .button { width: 100%; text-align: center; }
 
 @media (max-width: 700px) {
+  .nav-wrap { position: relative; flex-wrap: wrap; padding: 8px 0; }
+  .site-logo { width: 250px; height: 68px; }
+  .nav-toggle { display: block; margin-left: auto; border: 0; border-radius: 6px; padding: 10px 12px; background: var(--orange); color: var(--navy); font-weight: bold; }
+  .main-nav { display: none; width: 100%; flex-direction: column; gap: 4px; padding-top: 8px; }
+  .main-nav.open { display: flex; }
+  .main-nav a { display: block; }
   main { width: 92%; }
   .hero { grid-template-columns: 1fr; gap: 12px; }
   .hero blockquote { margin: 0; padding: 22px 20px; border-left: 5px solid var(--orange); background: white; border-radius: 8px; font-size: 18px; }
