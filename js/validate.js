@@ -7,15 +7,17 @@ function setupValidation(formId, includesMessage) {
   if (!form) return;
   var phone = form.querySelector("input[type='tel']");
   phone.addEventListener("input", function () { this.value = this.value.replace(/\D/g, ""); });
-  form.querySelectorAll("input, textarea").forEach(function (input) {
+  form.querySelectorAll("input:not([type='checkbox']), textarea").forEach(function (input) {
     input.addEventListener("input", function () { validateField(input, includesMessage); });
   });
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     var valid = true;
-    form.querySelectorAll("input, textarea").forEach(function (input) { if (!validateField(input, includesMessage)) valid = false; });
+    form.querySelectorAll("input:not([type='checkbox']), textarea").forEach(function (input) { if (!validateField(input, includesMessage)) valid = false; });
     if (!valid) return;
     if (formId === "bookingForm") {
+      var selectedCount = form.querySelectorAll(".fee-checkbox:checked").length;
+      if (!selectedCount) { document.getElementById("feeMessage").textContent = "Please select at least one item."; return; }
       sessionStorage.setItem("customerDetails", JSON.stringify({ name: document.getElementById("fullName").value, phone: phone.value, email: document.getElementById("emailAddress").value }));
       var submitButton = form.querySelector("button[type='submit']");
       var progress = document.getElementById("requestProgress");

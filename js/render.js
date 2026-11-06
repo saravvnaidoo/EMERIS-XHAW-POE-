@@ -26,13 +26,16 @@ function setImage(element, paths, label) {
 }
 function renderCards(items, containerId, detailPage) {
   var container = document.getElementById(containerId);
+  var packagePages = { ultimate: "ultimate-gamer-pass.html", vip: "vip-gaming-experience.html", esports: "esports-training.html", birthday: "birthday-party.html" };
+  var experiencePages = { vr: "virtual-reality.html", racing: "racing-simulator.html", escape: "escape-room.html" };
   container.innerHTML = "";
   items.forEach(function (item) {
     var card = document.createElement("article");
     card.className = "card";
     var imageSlot = '<div class="experience-image"></div>';
     var list = item.includes.map(function (included) { return "<li>" + included + "</li>"; }).join("");
-    card.innerHTML = imageSlot + '<h2>' + item.name + '</h2><div class="price">' + currency(item.price) + '</div><p>' + item.tagline + '</p><strong>Includes</strong><ul>' + list + '</ul><a class="button" href="' + detailPage + '?item=' + item.slug + '">View details</a>';
+    var detailLink = detailPage === "packages" ? packagePages[item.slug] : experiencePages[item.slug];
+    card.innerHTML = imageSlot + '<h2>' + item.name + '</h2><div class="price">' + currency(item.price) + '</div><p>' + item.tagline + '</p><strong>Includes</strong><ul>' + list + '</ul><a class="button" href="' + detailLink + '">View details</a>';
     container.appendChild(card);
     var slot = card.querySelector(".experience-image");
     if (item.type === "experience") setImage(slot, imagePath(item.slug), item.name);
