@@ -11,11 +11,15 @@ A responsive website for Next Level Gaming & Esports Arena in Johannesburg. The 
 
 No framework, build tool, package manager, database, or backend is used.
 
+## Demo Video
+
+Watch the video demonstration of the project on YouTube:  
+👉 [https://youtu.be/S64E0IlIEpk](https://youtu.be/S64E0IlIEpk)
+
 ## How to Run the Website
 
 You can access and open the live website directly at:  
 👉 [https://nextlevelgaming.vercel.app/index.html](https://nextlevelgaming.vercel.app/index.html)
-Youtube Link: https://youtu.be/S64E0IlIEpk
 
 Alternatively, to run it locally:
 
