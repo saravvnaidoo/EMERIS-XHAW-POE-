@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Gaming Packages | Next Level Gaming</title><link rel="stylesheet" href="css/style.css"></head>
 <body class="packages-page"><header id="site-header" class="site-header"></header><main><h1>Gaming Packages</h1><div class="banner image-slot" id="packagesBanner"></div><div class="toolbar"><label>Sort by: Price <select id="packageSort"><option value="low">Price: Low to High</option><option value="high">Price: High to Low</option></select></label><div class="toolbar-actions"><a href="compare.html">Compare all packages</a><a href="all-packages.html">See full price list</a></div></div><section class="card-grid packages-grid" id="packageCards"></section></main><footer id="site-footer"></footer><script src="js/nav.js"></script><script src="js/data.js"></script><script src="js/render.js"></script><script>
-setImage(document.getElementById("packagesBanner"), "assets/images/packages-banner.jpg", "Gaming package arena");
+setImage(document.getElementById("packagesBanner"), "assets/images/esportstraining.jpeg", "Esports Training");
 var renderedPackages = catalogItems.filter(function (item) { return item.type === "package"; });
 function renderPackages() { renderCards(renderedPackages, "packageCards", "packages"); }
 document.getElementById("packageSort").addEventListener("change", function () { var direction = this.value; renderedPackages.sort(function (a, b) { return direction === "low" ? a.price - b.price : b.price - a.price; }); renderPackages(); });
