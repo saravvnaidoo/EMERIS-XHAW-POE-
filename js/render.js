@@ -5,7 +5,11 @@ function currency(value) {
   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   return "R" + parts[0] + "." + parts[1];
 }
+<<<<<<< HEAD
 function imagePath(slug) { var paths = { ultimate: "assets/images/ultimate.jpg", vip: "assets/images/vip.jpg", esports: "assets/images/esportstraining.jpeg", birthday: "assets/images/birthday.jpg", vr: "assets/images/vr.jpg", racing: "assets/images/racing.jpg", escape: "assets/images/escape.jpg" }; return paths[slug] || ""; }
+=======
+function imagePath(slug) { var paths = { ultimate: "assets/images/ultimate.jpg", vip: "assets/images/vip.jpg", esports: "assets/images/esports.jpg", birthday: "assets/images/birthday.jpg", vr: "assets/images/vr.jpg", racing: "assets/images/racing.jpg", escape: "assets/images/escape.jpg" }; return paths[slug] || ""; }
+>>>>>>> f5e08caefde67a2f54e3ed66c28b735597555d5b
 function setImage(element, paths, label) {
   if (!element) return;
   var candidates = Array.isArray(paths) ? paths : [paths];
