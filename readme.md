@@ -1,100 +1,93 @@
-# Next Level Gaming & Esports Arena - Website
+# EMERIS XHAW POE Website
 
-A responsive website for Next Level Gaming & Esports Arena in Johannesburg. The site lets visitors explore gaming packages and individual experiences, calculate an estimated total fee, submit a booking request, and find contact and location details.
+![Home Banner](assets/images/home%20page.jpg)
 
-## Technologies
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Image Assets](#image-assets)
+- [Setup & Run](#setup--run)
+- [Directory Structure](#directory-structure)
+- [Customization Guide](#customization-guide)
+- [Credits](#credits)
+- [License](#license)
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Session storage for quote and booking data
+---
 
-No framework, build tool, package manager, database, or backend is used.
+## Project Overview
+The **EMERIS XHAW POE** website is a lightweight, static site that showcases the services offered by the EMERIS XHAW team. It is built entirely with HTML, CSS and vanilla JavaScript – no backend, build system or package manager is required.
 
-## How to Run the Website
+The site consists of a home page, an **About‑Us** page, an **Esports Training** page, and a **Gaming Packages** page. All visual assets are stored locally under `assets/images/` and are referenced via relative paths.
 
-You can access and open the live website directly at:  
-👉 [https://nextlevelgaming.vercel.app/index.html](https://nextlevelgaming.vercel.app/index.html)
+---
 
-Alternatively, to run it locally:
+## Features
+- Responsive navigation bar with smooth scrolling.
+- Dynamic image handling via `js/render.js` (banner images switch based on page slug).
+- Interactive fee calculator for gaming packages.
+- Dedicated sections for:
+  - **About‑Us** – includes a banner image.
+  - **Esports Training** – displays the `esportstraining.jpeg` image.
+  - **Gaming Packages** – banner image and an additional view of the esports‑training image.
+- Clean, modular CSS and JavaScript that can be extended without a build step.
 
-1. Open the project folder in Visual Studio Code.
-2. Open `index.html` with Live Server.
-3. Start at the Home page and use the main navigation.
-
-The site can also be opened locally by opening `index.html` directly in a web browser.
-
-## Website Pages
-
-- `index.html` - Home page with quick links to Packages, Experiences, Fees, and Contact
-- `about.html` - History, Vision, Mission, and Goals, plus founder content
-- `packages.html` - Gaming Packages summary, sortable by price
-- `ultimate-gamer-pass.html` - Ultimate Gamer Pass details
-- `vip-gaming-experience.html` - VIP Gaming Experience details
-- `esports-training.html` - Esports Training Package details
-- `birthday-party.html` - Birthday Party Package details
-- `experiences.html` - Individual Experiences summary
-- `virtual-reality.html` - Virtual Reality Experience details
-- `racing-simulator.html` - Racing Simulator Challenge details
-- `escape-room.html` - Escape Room Challenge details
-- `fees.html` - Fee calculator and contact details form combined, submits to the confirmation page
-- `confirmation.html` - Booking confirmation with amount due
-- `contact.html` - Phone, email, address, social link, embedded map, and a quick enquiry form
-- `compare.html` - Side-by-side package comparison table
-- `all-packages.html` - Full price list table of all packages and experiences
-
-## Main Features
-
-- Shared navigation and footer, injected via `js/nav.js`
-- Package and experience data stored centrally in `js/data.js`
-- Package and experience cards rendered from that shared data via `js/render.js`
-- Price sorting on the Packages page
-- Standalone detail page for every package and experience
-- Fee calculator with tiered discounts (5% for 2 bookings, 10% for 3, 15% for more than 3) plus 15% VAT, calculated only when the Calculate button is pressed
-- Combined fee calculator and contact details form, with the selected quote carried through to the confirmation page via session storage
-- Form validation with inline error messages for required fields, email format, and South African cell numbers
-- Embedded Google Map and a clickable social media link on the Contact page
-- Responsive layout for desktop, tablet, and mobile screens
+---
 
 ## Image Assets
+| File | Location in Project | Purpose |
+|------|---------------------|---------|
+| `home page.jpg` | `assets/images/home page.jpg` | Hero banner on the home page |
+| `arena interior-about us banner.jpg` | `assets/images/arena interior-about us banner.jpg` | Banner on the **About‑Us** page |
+| `esportstraining.jpeg` | `assets/images/esportstraining.jpeg` | Main image on **Esports Training** page and also shown on the **Gaming Packages** page |
+| `packages-banner.jpg` | `assets/images/packages-banner.jpg` | Banner on the **Gaming Packages** page |
 
-Images are stored in the `assets/` and `assets/images/` folders, including the logo, hero banners, founder image, package and experience images, and the confirmation banner.
+You can preview these images directly in the markdown preview (e.g., the home banner above).
 
-## Pricing
+---
 
-All four gaming packages are priced at R1,500.00. All three individual experiences are priced at R750.00. Prices are stored in `js/data.js` and used throughout the site from that shared catalogue.
+## Setup & Run
+1. **Clone / download** the repository.
+2. Ensure the folder structure remains unchanged – especially the `assets/`, `css/`, and `js/` directories.
+3. Open `index.html` in a modern web browser (Chrome, Edge, Firefox, etc.).
+   - For a better development experience you may use VS Code’s *Live Server* extension or any static‑file server.
+4. No additional installation steps are required; the site works out‑of‑the‑box.
 
-## Discounts & VAT
+---
 
-- 1 booking: no discount
-- 2 bookings: 5% discount
-- 3 bookings: 10% discount
-- More than 3 bookings: 15% discount
-- VAT is charged at 15% on the discounted subtotal
+## Directory Structure
+```
+EMERIS-XHAW-POE--master/
+├─ assets/
+│  └─ images/
+│     ├─ home page.jpg
+│     ├─ arena interior-about us banner.jpg
+│     ├─ esportstraining.jpeg
+│     └─ packages-banner.jpg
+├─ css/
+│  └─ style.css
+├─ js/
+│  └─ render.js
+├─ index.html
+├─ about.html
+├─ esports-training.html
+├─ packages.html
+└─ README.md
+```
 
-The calculated total on the Fees page is an estimate for quoting purposes, not a formal invoice.
+---
 
-## Validation
+## Customization Guide
+- **Changing a banner**: Edit the `setImage` call in `js/render.js` for the relevant slug (e.g., `about`, `packages`, `esports`). Replace the path with the new image file you place inside `assets/images/`.
+- **Adding a new page**: Copy an existing HTML file, update the navigation links in `index.html` (or the shared header), and add any page‑specific image mappings to `render.js`.
+- **Updating images**: Add the new image to `assets/images/` and update the HTML or `render.js` reference.
 
-- Required fields must be completed before forms submit.
-- Email addresses must be in a valid email format.
-- Cell numbers must be in a valid South African format (10 digits starting with 0, or 11 digits starting with 27).
-- Inline errors are shown directly below the relevant fields.
+---
 
-## Project Structure
+## Credits
+- **Author**: Saravan Naidoo
+- **Design inspiration**: EMERIS XHAW team
 
-```text
-EMERIS-XHAW-POE-/
-├── assets/
-├── css/
-├── js/
-├── index.html
-├── about.html
-├── packages.html
-├── experiences.html
-├── fees.html
-├── contact.html
-├── confirmation.html
-├── compare.html
-├── all-packages.html
-└── [individual package & experience detail pages]
+---
+
+## License
+This project is provided **as‑is** for educational and demonstration purposes. Feel free to fork, modify, and redistribute under your own terms.
