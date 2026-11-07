@@ -1,73 +1,54 @@
-# Next Level Gaming & Esports Arena - Website
+# EMERIS XHAW POE Website
 
-A responsive website for Next Level Gaming & Esports Arena in Johannesburg. The site lets visitors explore gaming packages and individual experiences, calculate an estimated total fee, submit a booking request, and find contact and location details.
+![Home Banner](assets/images/home%20page.jpg)
 
-## Technologies
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Demo Video](#demo-video)
+- [Features](#features)
+- [Pricing](#pricing)
+- [Discounts & VAT](#discounts--vat)
+- [Validation](#validation)
+- [Image Assets](#image-assets)
+- [Setup & Run](#setup--run)
+- [Directory Structure](#directory-structure)
+- [Customization Guide](#customization-guide)
+- [Credits](#credits)
+- [License](#license)
 
-- HTML5
-- CSS3
-- Vanilla JavaScript
-- Session storage for quote and booking data
+---
 
-No framework, build tool, package manager, database, or backend is used.
+## Project Overview
+The **EMERIS XHAW POE** website is a lightweight, static site that showcases the services offered by the EMERIS XHAW team. It is built entirely with HTML, CSS, and vanilla JavaScript – no backend, build system, or package manager is required.
+
+The site consists of a home page, an **About-Us** page, an **Esports Training** page, a **Gaming Packages** page, and dedicated experience sections. All visual assets are stored locally under `assets/images/` and are referenced via relative paths.
+
+---
 
 ## Demo Video
 
 Watch the video demonstration of the project on YouTube:  
 👉 [https://youtu.be/S64E0IlIEpk](https://youtu.be/S64E0IlIEpk)
 
-## How to Run the Website
+---
 
-You can access and open the live website directly at:  
-👉 [https://nextlevelgaming.vercel.app/index.html](https://nextlevelgaming.vercel.app/index.html)
+## Features
+- Responsive navigation bar with smooth scrolling.
+- Dynamic image handling via `js/render.js` (banner images switch based on page slug).
+- Interactive fee calculator for gaming packages.
+- Dedicated sections for:
+  - **About-Us** – includes a banner image.
+  - **Esports Training** – displays the `esportstraining.jpeg` image.
+  - **Gaming Packages** – banner image and an additional view of the esports-training image.
+- Clean, modular CSS and JavaScript that can be extended without a build step.
 
-Alternatively, to run it locally:
-
-1. Open the project folder in Visual Studio Code.
-2. Open `index.html` with Live Server.
-3. Start at the Home page and use the main navigation.
-
-The site can also be opened locally by opening `index.html` directly in a web browser.
-
-## Website Pages
-
-- `index.html` - Home page with quick links to Packages, Experiences, Fees, and Contact
-- `about.html` - History, Vision, Mission, and Goals, plus founder content
-- `packages.html` - Gaming Packages summary, sortable by price
-- `ultimate-gamer-pass.html` - Ultimate Gamer Pass details
-- `vip-gaming-experience.html` - VIP Gaming Experience details
-- `esports-training.html` - Esports Training Package details
-- `birthday-party.html` - Birthday Party Package details
-- `experiences.html` - Individual Experiences summary
-- `virtual-reality.html` - Virtual Reality Experience details
-- `racing-simulator.html` - Racing Simulator Challenge details
-- `escape-room.html` - Escape Room Challenge details
-- `fees.html` - Fee calculator and contact details form combined, submits to the confirmation page
-- `confirmation.html` - Booking confirmation with amount due
-- `contact.html` - Phone, email, address, social link, embedded map, and a quick enquiry form
-- `compare.html` - Side-by-side package comparison table
-- `all-packages.html` - Full price list table of all packages and experiences
-
-## Main Features
-
-- Shared navigation and footer, injected via `js/nav.js`
-- Package and experience data stored centrally in `js/data.js`
-- Package and experience cards rendered from that shared data via `js/render.js`
-- Price sorting on the Packages page
-- Standalone detail page for every package and experience
-- Fee calculator with tiered discounts (5% for 2 bookings, 10% for 3, 15% for more than 3) plus 15% VAT, calculated only when the Calculate button is pressed
-- Combined fee calculator and contact details form, with the selected quote carried through to the confirmation page via session storage
-- Form validation with inline error messages for required fields, email format, and South African cell numbers
-- Embedded Google Map and a clickable social media link on the Contact page
-- Responsive layout for desktop, tablet, and mobile screens
-
-## Image Assets
-
-Images are stored in the `assets/` and `assets/images/` folders, including the logo, hero banners, founder image, package and experience images, and the confirmation banner.
+---
 
 ## Pricing
 
 All four gaming packages are priced at R1,500.00. All three individual experiences are priced at R750.00. Prices are stored in `js/data.js` and used throughout the site from that shared catalogue.
+
+---
 
 ## Discounts & VAT
 
@@ -79,6 +60,8 @@ All four gaming packages are priced at R1,500.00. All three individual experienc
 
 The calculated total on the Fees page is an estimate for quoting purposes, not a formal invoice.
 
+---
+
 ## Validation
 
 - Required fields must be completed before forms submit.
@@ -86,15 +69,43 @@ The calculated total on the Fees page is an estimate for quoting purposes, not a
 - Cell numbers must be in a valid South African format (10 digits starting with 0, or 11 digits starting with 27).
 - Inline errors are shown directly below the relevant fields.
 
-## Project Structure
+---
 
+## Image Assets
+
+Images are stored in the `assets/` and `assets/images/` folders, including the logo, hero banners, founder image, package and experience images, and the confirmation banner.
+
+| File | Location in Project | Purpose |
+|------|---------------------|---------|
+| `home page.jpg` | `assets/images/home page.jpg` | Hero banner on the home page |
+| `arena interior-about us banner.jpg` | `assets/images/arena interior-about us banner.jpg` | Banner on the **About-Us** page |
+| `esportstraining.jpeg` | `assets/images/esportstraining.jpeg` | Main image on **Esports Training** page and also shown on the **Gaming Packages** page |
+| `packages-banner.jpg` | `assets/images/packages-banner.jpg` | Banner on the **Gaming Packages** page |
+
+---
+
+## Setup & Run
+1. **Clone / download** the repository.
+2. Ensure the folder structure remains unchanged – especially the `assets/`, `css/`, and `js/` directories.
+3. Open `index.html` in a modern web browser (Chrome, Edge, Firefox, etc.).
+   - For a better development experience you may use VS Code’s *Live Server* extension or any static-file server.
+4. No additional installation steps are required; the site works out-of-the-box.
+
+---
+
+## Directory Structure
 ```text
 xhaw5112-wil-g1-2026-wil-g1-website-saravvnaidoo/
 ├── assets/
 │   └── images/
+│       ├── home page.jpg
+│       ├── arena interior-about us banner.jpg
+│       ├── esportstraining.jpeg
+│       └── packages-banner.jpg
 ├── docs/
 │   └── Bombers_United_Next_Level_Gaming_Presentation.pptx
 ├── css/
+│   └── style.css
 ├── js/
 │   ├── data.js
 │   ├── nav.js
